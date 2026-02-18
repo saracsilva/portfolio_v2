@@ -6,7 +6,12 @@
     transform: rotate(-45deg);
   }
 
-  &.animated {
+  &.smile-face--small {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  &.smile-face--animated {
     animation: wiggle 1s ease-in-out infinite;
   }
 }
