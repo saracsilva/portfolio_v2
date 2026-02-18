@@ -1,8 +1,13 @@
+import SmileFace from "../components/smileFace";
+
 function Hero() {
   return (
-    <div className="flex flex-col items-center gap-8 font-serif">
+    <div className="flex flex-col items-center gap-8 font-serif my-20">
       <h1 className="text-9xl tracking-widest ">Sara Silva</h1>
-      <h2 className="text-5xl italic">Brazilian</h2>
+      <div className="flex gap-1">
+        <h2 className="text-5xl italic">Brazilian</h2>{" "}
+        <SmileFace animated={true} />
+      </div>
       <div className="text-4xl">
         <h2>
           I’m a{" "}
