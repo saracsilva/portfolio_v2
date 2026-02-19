@@ -1,0 +1,38 @@
+.card {
+  list-style: none;
+  border: 1px solid var(--text-color);
+  padding: 1.5rem;
+}
+
+.card__title {
+  font-family: var(--font-mono);
+  font-size: large;
+  margin-bottom: 1rem;
+  text-align: right;
+  margin-left: auto;
+  width: 60%;
+  border-bottom: #000 2px solid;
+}
+
+.card__media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card:hover {
+  outline: 1px solid var(--text-color);
+  background: lch(from var(--text-color) l c h / 0.08);
+}
+
+.card:focus {
+  outline: 1px solid var(--text-color);
+}
