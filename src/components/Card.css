@@ -1,7 +1,7 @@
 .card {
-  list-style: none;
   border: 1px solid var(--text-color);
   padding: 1.5rem;
+  cursor: pointer;
 }
 
 .card__title {
@@ -9,9 +9,17 @@
   font-size: large;
   margin-bottom: 1rem;
   text-align: right;
-  margin-left: auto;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
   width: 60%;
-  border-bottom: #000 2px solid;
+  border-bottom: 2px solid #000;
 }
 
 .card__media {
