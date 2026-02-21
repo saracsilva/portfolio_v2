@@ -17,8 +17,8 @@ function Projects() {
   const openModal = (project) => setActiveProject(project);
 
   const closeModal = () => {
-    setActiveProject(null);
     dialogRef.current?.close();
+    setActiveProject(null);
   };
 
   return (
@@ -43,6 +43,7 @@ function Projects() {
         <Modal
           ref={dialogRef}
           title={activeProject?.title}
+          description={activeProject?.description}
           image={activeProject?.image}
           onClose={closeModal}
         />
