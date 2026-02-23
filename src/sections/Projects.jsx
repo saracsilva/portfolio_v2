@@ -40,13 +40,7 @@ function Projects() {
       </section>
 
       {activeProject && (
-        <Modal
-          ref={dialogRef}
-          title={activeProject?.title}
-          description={activeProject?.description}
-          image={activeProject?.image}
-          onClose={closeModal}
-        />
+        <Modal ref={dialogRef} project={activeProject} onClose={closeModal} />
       )}
     </>
   );
