@@ -8,7 +8,7 @@
 }
 
 .modal__content {
-  background: var(--background-color);
+  background: var(--color-background);
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,14 +41,14 @@
 
 .modal__close-button {
   border: 1px solid var(--text-color);
-  background: var(--background-color);
+  background: var(--color-background);
   padding: 0.25rem;
   justify-self: end;
 }
 
 .modal__close-button:hover {
   background: var(--text-color);
-  color: var(--background-color);
+  color: var(--color-background);
   cursor: pointer;
 }
 

@@ -1,4 +1,4 @@
-import SmileFace from "../components/smileFace";
+import SmileFace from "../components/SmileFace";
 
 function Hero() {
   return (

@@ -23,7 +23,7 @@ function Projects() {
 
   return (
     <>
-      <section id="projects">
+      <section id="projects" className="scroll-mt-24">
         <SectionTitle title="Projects" />
         <div className="container my-28 px-8 md:px-16">
           <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
