@@ -11,6 +11,11 @@
     height: 1.2rem;
   }
 
+  &.smile-face--medium {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   &.smile-face--animated {
     animation: wiggle 1s ease-in-out infinite;
   }

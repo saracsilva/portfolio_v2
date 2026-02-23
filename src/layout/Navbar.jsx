@@ -15,7 +15,7 @@ function Navbar() {
             <a href="#about" className="italic">
               About me
             </a>
-            <SmileFace small={true} />
+            <SmileFace size="small" />
           </div>
         </li>
         <li className="p-6">
