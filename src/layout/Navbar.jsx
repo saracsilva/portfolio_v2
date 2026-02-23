@@ -2,8 +2,8 @@ import SmileFace from "../components/smileFace";
 
 function Navbar() {
   return (
-    <nav>
-      <ul className="flex justify-end border-t-8  border-b border-black font-serif text-2xl">
+    <nav className="border-t-8 border-b border-black">
+      <ul className="container flex justify-end font-serif text-2xl">
         <li className="border-r p-6">
           <a href="#projects">Projects</a>
         </li>
