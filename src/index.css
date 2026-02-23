@@ -4,7 +4,7 @@
   --font-body: "Roboto", sans-serif;
   --font-serif: "Playfair Display", serif;
   --font-mono: "Ubuntu Mono", monospace;
-  --background-color: #f2f2f2;
+  --color-background: #f2f2f2;
   --color-primary: #ae3bff;
   --color-secondary: #ffca00;
   --text-color: #333;
@@ -12,7 +12,7 @@
 
 body {
   font-family: var(--font-body);
-  background-color: var(--background-color);
+  background-color: var(--color-background);
   color: var(--text-color);
   margin: 0;
   padding: 0;
