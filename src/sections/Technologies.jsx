@@ -2,7 +2,7 @@ import SectionTitle from "../components/SectionTitle";
 
 function Technologies() {
   return (
-    <section id="technologies">
+    <section id="technologies" className="scroll-mt-24">
       <SectionTitle title="Technologies" />
       <div className="container my-20 px-8 md:px-16 border-y border-text-color">
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 font-mono font-medium">

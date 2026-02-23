@@ -2,7 +2,7 @@ import SectionTitle from "../components/SectionTitle";
 
 function AboutMe() {
   return (
-    <section id="about">
+    <section id="about" className="scroll-mt-24">
       <SectionTitle title="About Me" isAbout />
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 my-20 px-8 md:px-16 lg:px-32 justify-items-center items-start">
         <div className="border-2 p-4">
@@ -38,10 +38,8 @@ function AboutMe() {
               can grow and contribute to meaningful products.
             </p>
           </di>
-          <h2 className="font-mono font-bold mt-6">Current</h2>
-          <p>
-            -In <s>Itajaí, Lisbon, Barreiro, Hengelo,</s> Enschede.
-          </p>
+          <h2 className="font-mono font-bold mt-6">Currently</h2>
+          <p>- In Enschede.</p>
         </div>
       </div>
     </section>
