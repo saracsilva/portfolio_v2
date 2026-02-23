@@ -1,11 +1,11 @@
 import smileIcon from "../assets/icons/smile_face.svg";
 import "./SmileFace.css";
 
-function SmileFace({ animated = false, small = false }) {
+function SmileFace({ animated = false, size = "large" }) {
   const classes = [
     "smile-face",
     animated && "smile-face--animated",
-    small && "smile-face--small",
+    size !== "large" && `smile-face--${size}`,
   ]
     .filter(Boolean)
     .join(" ");
