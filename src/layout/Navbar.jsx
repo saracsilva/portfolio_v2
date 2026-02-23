@@ -8,7 +8,7 @@ function Navbar() {
           <a href="#projects">Projects</a>
         </li>
         <li className="border-r p-6">
-          <a href="#tecnologies">Tecnologies</a>
+          <a href="#technologies">Technologies</a>
         </li>
         <li className="border-r p-6">
           <div className="flex gap-1">
