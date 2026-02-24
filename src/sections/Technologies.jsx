@@ -4,7 +4,7 @@ function Technologies() {
   return (
     <section id="technologies" className="scroll-mt-24">
       <SectionTitle title="Technologies" />
-      <div className="container my-20 px-8 md:px-16 border-y border-text">
+      <div className="container my-28 px-8 md:px-16 border-y border-text">
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 font-mono font-medium">
           <li>
             <ul className="flex flex-col items-center border-r py-4">
