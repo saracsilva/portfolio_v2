@@ -1,5 +1,5 @@
 .card {
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--color-text);
   padding: 1.5rem;
   cursor: pointer;
 }
@@ -37,10 +37,10 @@
 }
 
 .card:hover {
-  outline: 1px solid var(--text-color);
-  background: lch(from var(--text-color) l c h / 0.08);
+  outline: 1px solid var(--color-text);
+  background: lch(from var(--color-text) l c h / 0.08);
 }
 
 .card:focus {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid var(--color-text);
 }

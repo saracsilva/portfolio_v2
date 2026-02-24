@@ -1,0 +1,30 @@
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0 2rem;
+  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.field::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--color-text);
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.field:focus-within::after {
+  height: 2px;
+  background: var(--color-primary);
+}
+
+.field:focus-within {
+  background: lch(from var(--color-text) l c h / 0.03);
+}
