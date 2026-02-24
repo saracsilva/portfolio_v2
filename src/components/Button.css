@@ -1,0 +1,51 @@
+.button {
+  font-family: var(--font-mono);
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.button--primary {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &.button--primary:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+  }
+
+  &.button--default {
+    border: 2px solid var(--color-text);
+    color: inherit;
+  }
+
+  &.button--default:hover {
+    border: 2px solid var(--color-text);
+    background-color: var(--color-text);
+    color: #fff;
+  }
+
+  &.button--outlined {
+    border: 1px solid var(--color-text);
+    color: inherit;
+  }
+
+  &.button--outlined:hover {
+    border: 1px solid var(--color-text);
+    background-color: var(--color-text);
+    color: #fff;
+  }
+
+  &.button--icon-only {
+    padding-block: 0.25rem;
+    padding-inline: 0.25rem;
+  }
+
+  &.button--pill {
+    border-radius: 9999px;
+    padding-block: 0.75rem;
+    padding-inline: 0.75rem;
+  }
+}

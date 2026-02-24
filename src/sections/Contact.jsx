@@ -1,5 +1,9 @@
 import SectionTitle from "../components/SectionTitle";
 import SmileFace from "../components/SmileFace";
+import Button from "../components/Button";
+import { RiLinkedinFill } from "react-icons/ri";
+import { TbBrandGithubFilled } from "react-icons/tb";
+
 import "./Contact.css";
 
 function Contact() {
@@ -12,10 +16,31 @@ function Contact() {
             Hey, <SmileFace />
           </h2>
           <h3 className="text-xl mt-2 font-serif">Love to hear from you!</h3>
-          <p className="mt-8 text-justify">
+          <p className="mt-8 mb-6 text-justify">
             Send me a message trough the form and I'll get back to you as soon
             as possible! Or find me on GitHub and LinkedIn.
           </p>
+          <div className="flex gap-3">
+            <Button
+              variant="default"
+              pill
+              href="https://github.com/saracsilva"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TbBrandGithubFilled />
+            </Button>
+
+            <Button
+              variant="default"
+              pill
+              href="https://linkedin.com/in/sara-carolina-silva/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RiLinkedinFill />
+            </Button>
+          </div>
         </div>
         <form
           action=""
@@ -31,6 +56,7 @@ function Contact() {
               className="py-2 px-2 focus:outline-none"
               id="name"
               name="name"
+              required
               placeholder="Your name"
             />
           </label>
@@ -41,6 +67,7 @@ function Contact() {
               className="py-2 px-2 focus:outline-none"
               id="email"
               name="email"
+              required
               placeholder="Your email"
             />
           </label>
@@ -51,15 +78,11 @@ function Contact() {
               rows="5"
               className="px-2 resize-none focus:outline-none"
               id="message"
+              required
               placeholder="Your message"
             ></textarea>
           </label>
-          <button
-            type="submit"
-            className="font-mono my-6 mx-8 py-2 border-2 border-primary text-primary hover:bg-primary hover:text-white transition"
-          >
-            Send message
-          </button>
+          <Button className="my-6 mx-8">Send message</Button>
         </form>
       </div>
     </section>

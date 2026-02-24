@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import "./Modal.css";
 import { TfiClose } from "react-icons/tfi";
+import Button from "../components/Button";
 
 const Modal = forwardRef(function Modal({ project, onClose }, ref) {
   if (!project) return null;
@@ -30,14 +31,15 @@ const Modal = forwardRef(function Modal({ project, onClose }, ref) {
         <div className="modal__details">
           <div className="modal__header">
             <h2 className="modal__title">{title}</h2>
-            <button
-              type="button"
-              className="modal__close-button"
-              onClick={onClose}
+            <Button
               aria-label="close modal"
+              variant="outlined"
+              type="button"
+              onClick={onClose}
+              icon={true}
             >
               <TfiClose />
-            </button>
+            </Button>
           </div>
           <p className="modal__description">{description}</p>
 
