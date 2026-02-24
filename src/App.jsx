@@ -4,6 +4,7 @@ import Projects from "./sections/Projects";
 import Technologies from "./sections/Technologies";
 import AboutMe from "./sections/AboutMe";
 import Contact from "./sections/Contact";
+import Footer from "./layout/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Technologies />
       <AboutMe />
       <Contact />
+      <Footer />
     </>
   );
 }
