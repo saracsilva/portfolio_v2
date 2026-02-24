@@ -1,4 +1,4 @@
-import smileIcon from "../assets/icons/smile_face.svg";
+import smileIcon from "/smile_face.svg";
 import "./SmileFace.css";
 
 function SmileFace({ animated = false, size = "large" }) {
