@@ -9,8 +9,10 @@ import Footer from "./layout/Footer";
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
+      <header>
+        <Navbar />
+        <Hero />
+      </header>
       <Projects />
       <Technologies />
       <AboutMe />
