@@ -1,12 +1,69 @@
+import { useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 import SmileFace from "../components/SmileFace";
 import Button from "../components/Button";
 import { RiLinkedinFill } from "react-icons/ri";
 import { TbBrandGithubFilled } from "react-icons/tb";
-
+import { LuCircleCheck, LuCircleAlert } from "react-icons/lu";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({
+    type: null,
+    message: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+    setIsLoading(true);
+    setSubmitStatus({ type: null, message: "" });
+    try {
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error(
+          "EmailJS configuration is missing. Please check your environment variables.",
+        );
+      }
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        publicKey,
+      );
+
+      setSubmitStatus({
+        type: "success",
+        message: "Message sent successfully! I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setSubmitStatus({
+        type: "error",
+        message:
+          error.text || "Failed to send message. Please try again later.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="scroll-mt-24">
       <SectionTitle title="Contact" />
@@ -44,9 +101,27 @@ function Contact() {
         </div>
         <form
           action=""
-          className="border flex flex-col lg:col-span-3 pt-8 mx-16 w-full max-w-lg justify-self-center"
+          className="border flex flex-col lg:col-span-3 mx-16 w-full max-w-lg justify-self-center"
+          onSubmit={handleSubmit}
         >
-          <h3 className="text-2xl pb-8 px-8 font-mono border-b-2">
+          {submitStatus.type && (
+            <div
+              className={`flex items-center pl-8 gap-3
+                     p-4 ${
+                       submitStatus.type === "success"
+                         ? "bg-success/10 text-success border-b-2 text-center"
+                         : "bg-danger/10 text-danger border-b-2 text-center"
+                     }`}
+            >
+              {submitStatus.type === "success" ? (
+                <LuCircleCheck className="w-5 h-5 shrink-0" />
+              ) : (
+                <LuCircleAlert className="w-5 h-5 shrink-0" />
+              )}
+              <p className="text-sm">{submitStatus.message}</p>
+            </div>
+          )}
+          <h3 className="text-2xl p-8 font-mono border-b-2">
             Say Hello<span className=" text-primary ">()</span>
           </h3>
           <label className="field" htmlFor="name">
@@ -55,9 +130,12 @@ function Contact() {
               type="text"
               className="py-2 px-2 focus:outline-none"
               id="name"
-              name="name"
               required
               placeholder="Your name"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
             />
           </label>
           <label className="field" htmlFor="email">
@@ -66,9 +144,12 @@ function Contact() {
               type="email"
               className="py-2 px-2 focus:outline-none"
               id="email"
-              name="email"
               required
               placeholder="Your email"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
             />
           </label>
           <label className="field" htmlFor="message">
@@ -80,9 +161,15 @@ function Contact() {
               id="message"
               required
               placeholder="Your message"
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
             ></textarea>
           </label>
-          <Button className="my-6 mx-8">Send message</Button>
+          <Button type="submit" className="my-6 mx-8" disabled={isLoading}>
+            {isLoading ? <>Sending...</> : <>Send Message</>}
+          </Button>
         </form>
       </div>
     </section>

@@ -13,7 +13,7 @@ function AboutMe() {
           />
         </div>
         <div className="xl:text-lg">
-          <di className=" space-y-6">
+          <div className=" space-y-6">
             <p>
               I'm Sara, from the warm lands of Brazil, in a city called Itajaí
               by the beach. I’m a Frontend Developer currently living in the
@@ -37,7 +37,7 @@ function AboutMe() {
               and I’m currently looking for a Frontend Developer role where I
               can grow and contribute to meaningful products.
             </p>
-          </di>
+          </div>
           <h2 className="font-mono font-bold mt-6">Currently</h2>
           <p>- In Enschede.</p>
         </div>
