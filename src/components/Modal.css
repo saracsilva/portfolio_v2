@@ -60,6 +60,12 @@
   font-family: var(--font-mono);
 }
 
+.modal__link:hover {
+  color: var(--color-primary);
+  border-color: var(--color-text);
+  text-decoration: underline;
+}
+
 .modal__media {
   display: flex;
   justify-content: center;

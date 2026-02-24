@@ -15,7 +15,7 @@ function Hero() {
         <div className="text-4xl">
           <h2>
             I’m a{" "}
-            <span className="font-mono">
+            <span className="font-mono bg-secondary">
               FrontEnd Developer
               <span className="text-primary">_</span>
             </span>

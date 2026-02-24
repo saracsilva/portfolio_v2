@@ -47,6 +47,7 @@ const Modal = forwardRef(function Modal({ project, onClose }, ref) {
             {typeof github === "object" ? (
               <div className="flex flex-col gap-2 border-r-2 pr-4">
                 <a
+                  className="modal__link"
                   href={github.frontend}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -54,6 +55,7 @@ const Modal = forwardRef(function Modal({ project, onClose }, ref) {
                   GitHub Frontend
                 </a>
                 <a
+                  className="modal__link"
                   href={github.backend}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -63,7 +65,7 @@ const Modal = forwardRef(function Modal({ project, onClose }, ref) {
               </div>
             ) : (
               <a
-                className="flex flex-col gap-2 border-r-2 pr-4"
+                className="modal__link flex flex-col gap-2 border-r-2 pr-4"
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,7 +74,12 @@ const Modal = forwardRef(function Modal({ project, onClose }, ref) {
               </a>
             )}
 
-            <a href={live} target="_blank" rel="noopener noreferrer">
+            <a
+              href={live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal__link"
+            >
               Live Demo
             </a>
           </div>
