@@ -74,7 +74,7 @@ function Contact() {
           </h2>
           <h3 className="text-xl mt-2 font-serif">Love to hear from you!</h3>
           <p className="mt-8 mb-6 text-justify">
-            Send me a message trough the form and I'll get back to you as soon
+            Send me a message through the form, and I'll get back to you as soon
             as possible! Or find me on GitHub and LinkedIn.
           </p>
           <div className="flex gap-3">
