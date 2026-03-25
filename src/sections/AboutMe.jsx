@@ -7,7 +7,7 @@ function AboutMe() {
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 my-28 px-8 md:px-16 lg:px-32 justify-items-center items-start">
         <div className="border-2 p-4">
           <img
-            src="/about_me/about_me.png"
+            src="/about_me/about_me.webp"
             alt=""
             className="border block max-h-140"
           />
