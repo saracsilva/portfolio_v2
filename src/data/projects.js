@@ -1,7 +1,7 @@
-import project1Img from "/projects/project_01.png";
-import project2Img from "/projects/project_02.png";
-import project3Img from "/projects/project_03.png";
-import project4Img from "/projects/project_04.png";
+import project1Img from "/projects/project_01.webp";
+import project2Img from "/projects/project_02.webp";
+import project3Img from "/projects/project_03.webp";
+import project4Img from "/projects/project_04.webp";
 
 export const projects = [
   {
