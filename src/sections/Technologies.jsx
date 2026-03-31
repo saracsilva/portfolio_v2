@@ -9,6 +9,7 @@ function Technologies() {
           <li>
             <ul className="flex flex-col px-8 items-center border-b md:border-b-0 md:border-r py-4">
               <li>JavaScript</li>
+              <li>Hotwire (Turbo, Stimulus)</li>
               <li>Ruby on Rails</li>
               <li>HTML5</li>
               <li>CSS</li>
@@ -19,13 +20,16 @@ function Technologies() {
             <ul className="flex flex-col px-8 items-center border-b md:border-b-0 md:border-r py-4 h-full">
               <li>React</li>
               <li>Tailwind</li>
+              <li>Figma</li>
             </ul>
           </li>
 
           <li>
             <ul className="flex flex-col px-8 items-center py-4">
               <li>Git / GitHub</li>
-              <li>Figma</li>
+              <li>Capybara</li>
+              <li>Cypress</li>
+              <li>Accessibility (WCAG)</li>
             </ul>
           </li>
         </ul>

@@ -41,7 +41,18 @@ const Modal = forwardRef(function Modal({ project, onClose }, ref) {
               <TfiClose />
             </Button>
           </div>
-          <p className="modal__description">{description}</p>
+          <div>
+            <h2 className="modal__description-title">What it is</h2>
+            <p className="modal__description">{description.what}</p>
+          </div>
+          <div>
+            <h2 className="modal__description-title">Stack</h2>
+            <p className="modal__description">{description.stack}</p>
+          </div>
+          <div>
+            <h2 className="modal__description-title">My role</h2>
+            <p className="modal__description">{description.role}</p>
+          </div>
 
           <div className="modal__links">
             {typeof github === "object" ? (
