@@ -32,7 +32,7 @@ function Projects() {
             personal Rails project is in there too, built when I was teaching
             myself Rails before going professional. More is on the way.
           </p>
-          <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map((project) => (
               <Card
                 key={project.id}
