@@ -41,47 +41,63 @@ const Modal = forwardRef(function Modal({ project, onClose }, ref) {
               <TfiClose />
             </Button>
           </div>
-          <p className="modal__description">{description}</p>
+          <div>
+            <h2 className="modal__description-title">What it is</h2>
+            <p className="modal__description">{description.what}</p>
+          </div>
+          <div>
+            <h2 className="modal__description-title">Stack</h2>
+            <p className="modal__description">{description.stack}</p>
+          </div>
+          <div>
+            <h2 className="modal__description-title">My role</h2>
+            <p className="modal__description">{description.role}</p>
+          </div>
 
           <div className="modal__links">
-            {typeof github === "object" ? (
-              <div className="flex flex-col gap-2 border-r-2 pr-4">
+            {github &&
+              (typeof github === "object" ? (
+                <div className="flex flex-col gap-2 border-r-2 pr-4">
+                  <a
+                    className="modal__link"
+                    href={github.frontend}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub Frontend
+                  </a>
+                  <a
+                    className="modal__link"
+                    href={github.backend}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub Backend
+                  </a>{" "}
+                </div>
+              ) : (
                 <a
-                  className="modal__link"
-                  href={github.frontend}
+                  className="modal__link flex flex-col gap-2 border-r-2 pr-4"
+                  href={github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GitHub Frontend
+                  GitHub
                 </a>
-                <a
-                  className="modal__link"
-                  href={github.backend}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub Backend
-                </a>{" "}
-              </div>
-            ) : (
+              ))}
+            {live && (
               <a
-                className="modal__link flex flex-col gap-2 border-r-2 pr-4"
-                href={github}
+                href={live}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="modal__link"
               >
-                GitHub
+                Live Demo
               </a>
             )}
-
-            <a
-              href={live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="modal__link"
-            >
-              Live Demo
-            </a>
+            {!github && !live && (
+              <p className="modal__description-title">Coming soon</p>
+            )}
           </div>
         </div>
       </div>

@@ -26,7 +26,13 @@ function Projects() {
       <section id="projects" className="scroll-mt-24">
         <SectionTitle title="Projects" />
         <div className="container my-28 px-8 md:px-16">
-          <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          <p className="mb-12">
+            These projects span my journey from bootcamp to frontend developer.
+            The earlier ones are from Ironhack in 2022, where it all started. A
+            personal Rails project is in there too, built when I was teaching
+            myself Rails before going professional. More is on the way.
+          </p>
+          <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map((project) => (
               <Card
                 key={project.id}
