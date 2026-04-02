@@ -15,6 +15,10 @@ export const projects = [
       stack: "React · Tailwind CSS · MongoDB · Express · Node.js",
       role: "Solo project. Built and designed entirely by me.",
     },
+    github: {
+      frontend: "https://github.com/saracsilva/emotion-tracker-client",
+      backend: "https://github.com/saracsilva/emotion-tracker-api",
+    },
   },
   {
     id: 5,
